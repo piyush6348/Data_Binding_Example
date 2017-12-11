@@ -7,13 +7,7 @@ package com.example.databinding.model;
 public class Student {
     private String name;
     private String className;
-    private Integer rollNo;
-
-    public Student(String name, String className, Integer rollNo) {
-        this.name = name;
-        this.className = className;
-        this.rollNo = rollNo;
-    }
+    private String rollNo;
 
     public String getName() {
         return name;
@@ -31,11 +25,18 @@ public class Student {
         this.className = className;
     }
 
-    public Integer getRollNo() {
+    public String getRollNo() {
         return rollNo;
     }
 
-    public void setRollNo(Integer rollNo) {
+    public void setRollNo(String rollNo) {
+        this.rollNo = rollNo;
+    }
+
+    public Student(String name, String className, String rollNo) {
+
+        this.name = name;
+        this.className = className;
         this.rollNo = rollNo;
     }
 }

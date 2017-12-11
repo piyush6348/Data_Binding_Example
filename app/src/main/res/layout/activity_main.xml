@@ -4,6 +4,9 @@
         <variable
             name="student"
             type="com.example.databinding.model.Student"/>
+        <variable
+            name="handler"
+            type="com.example.databinding.handlers.MainActivityHandler"/>
     </data>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -32,5 +35,18 @@
             android:textSize="18sp"
             android:gravity="center"
             android:text="@{student.rollNo}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="Btn 1"
+            android:onClick="@{handler::onClickView}"
+            android:id="@+id/btn1"
+            android:layout_height="50dp"    />
+        <Button
+            android:layout_width="match_parent"
+            android:text="Btn 2"
+            android:onClick="@{handler::onClickView}"
+            android:id="@+id/btn2"
+            android:layout_height="50dp"    />
     </LinearLayout>
 </layout>
